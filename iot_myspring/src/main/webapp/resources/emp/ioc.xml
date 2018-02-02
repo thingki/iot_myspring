@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+   <context:property-placeholder location="emp/dbconf.properties"/>
+   <bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+      <property name="driverClassName" value="${driver}"/>
+      <property name="url" value="${url}"/>
+      <property name="username" value="${id}"/>
+      <property name="password" value="${pwd}"/>
+      <property name="initialSize" value="${max}"></property>
+      <property name="maxTotal" value="${max}"></property>
+      <property name="minIdle" value="${max}"></property>
+      <property name="maxIdle" value="${max}"></property>
+      <property name="maxWaitMillis" value="${wait}"></property>
+   </bean>
+   
+   <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate" >
+      <property name="dataSource" ref="ds"></property>
+   </bean>
+   
+   <context:component-scan base-package="com.iot.spring"></context:component-scan>
+</beans>

@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces='true'%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+
+<c:set var="ver" value="?version=1.0.0"/>
+<script src="${root}/resources/ui/js/jquery-3.2.1.js${ver}"></script>
+<script src="${root}/resources/ui/js/jquery.min.js${ver}"></script>
+<script src="${root}/resources/ui/js/grid-obj.js${ver}"></script>
+<script src="${root}/resources/ui/js/bootstrap.min.js${ver}"></script>
+
+<link rel="stylesheet" type="text/css" href="${root}/resources/ui/css/bootstrap.min.css${ver}"/>
+<link rel="stylesheet" type="text/css" href="${root}/resources/ui/css/bootstrap-theme.min.css${ver}"/>
+<link rel="stylesheet" type="text/css" href="${root}/resources/ui/css/list.css${ver}"/>
+
