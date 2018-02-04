@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="menu">
+	<select id="selectMenu" parameterType="MenuInfo" resultType="MenuInfo">
+		select mNum,mName,mUrl, mDesc from menu
+	</select>
+	
+	<select id="insertMenu"	resultType="int" parameterType="MenuInfo">
+	insert into emp(emName,emSal) 
+	values(#{emName},#{emSal})
+	</select>
+	
+	<select id="updateMenu" resultType="map">
+	update emp 
+	set emname=#{emname}, emsal=#{emsal} where emno=#{emno}
+	</select>
+	
+	<select id="deleteMenu" resultType="map">
+	delete from emp where emno=#{emno}
+	</select>
+</mapper>

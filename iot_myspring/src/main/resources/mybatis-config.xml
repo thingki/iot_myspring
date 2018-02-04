@@ -11,9 +11,11 @@
 	<typeAliases>
 		<typeAlias type="com.iot.spring.vo.UserInfo" alias="userinfo" />
 		<typeAlias type="com.iot.spring.vo.Emp" alias="emp" />
+		<typeAlias type="com.iot.spring.vo.MenuInfo" alias="menu" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="sql/user.xml" />
 		<mapper resource="sql/emp.xml" />
+		<mapper resource="sql/menu.xml" />
 	</mappers>
 </configuration>

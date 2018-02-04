@@ -15,3 +15,67 @@
 <link rel="stylesheet" type="text/css" href="${root}/resources/ui/css/bootstrap-theme.min.css${ver}"/>
 <link rel="stylesheet" type="text/css" href="${root}/resources/ui/css/list.css${ver}"/>
 
+
+<c:forEach items="${menuList}" var="menu">
+			<tr>
+				<td><a href="${root}${menu.url}">${menu.mNum}</td>
+				<td>${menu.mName}</td>
+			</tr>
+</c:forEach>
+
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="<%=root%>/">IOT2_TEST HOMEPAGE</a>
+		</div>
+		<!-- Links -->
+		<ul class="nav navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="<%=root%>">/"><em
+					class="glyphicon glyphicon-home"></em>Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#"><em
+					class="glyphicon glyphicon-off"></em>Login</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="<%=root%>/view/user/user_list"><em
+					class="glyphicon glyphicon-list-alt"></em>User List</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="<%=root%>/view/user/mypage"><em
+					class="glyphicon glyphicon-user"></em>My Page</a></li>
+			<!-- Dropdown -->
+			<li class="dropdown"><a class="dropdown-toggle" href="#"
+				id="navbardrop" data-toggle="dropdown"><em
+					class="glyphicon glyphicon-th"></em>Class Info <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="<%=root%>/view/class/classlist"><em
+							class="glyphicon glyphicon-book"></em>Class List</a></li>
+					<li><a href="<%=root%>/view/class/classinsert"><em
+							class="glyphicon glyphicon-download-alt"></em>Class Insert</a></li>
+					<li><a href="#"><em class="glyphicon glyphicon-headphones"></em>Contect
+							us</a></li>
+				</ul></li>
+			<!-- Dropdown -->
+			<li class="dropdown"><a class="dropdown-toggle" href="#"
+				id="navbardrop" data-toggle="dropdown"><em
+					class="glyphicon glyphicon-th"></em>Customer Info
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="<%=root%>/view/customer/customer_list"><em
+							class="glyphicon glyphicon-book"></em>Customer List</a></li>
+					<li><a href="<%=root%>/view/class/customer_insert"><em
+							class="glyphicon glyphicon-download-alt"></em>Customer Insert</a></li>
+				</ul></li>
+			<!-- Dropdown -->
+			<li class="dropdown"><a class="dropdown-toggle" href="#"
+				id="navbardrop" data-toggle="dropdown"><em
+					class="glyphicon glyphicon-th"></em>Employer Info
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="<%=root%>/view/customer/emp_list"><em
+							class="glyphicon glyphicon-book"></em>Employer List</a></li>
+					<li><a href="<%=root%>/view/class/emp_insert"><em
+							class="glyphicon glyphicon-download-alt"></em>Employer Insert</a></li>
+				</ul></li>
+				<li><a href="#"><em class="glyphicon glyphicon-headphones"></em>Contect us
+							us</a></li>	
+		</ul>
+	</div>
+</nav>
